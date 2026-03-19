@@ -113,7 +113,7 @@ function showToast(errors) {
  
     // Close button
     const close = document.createElement('span');
-    close.textContent = '✕';
+    close.textContent = 'close';
     close.style.cssText = `
         position: absolute;
         top: 8px;

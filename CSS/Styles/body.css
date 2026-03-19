@@ -1,1 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+#main_container {
+
+    border: solid 2px rgb(255, 255, 255, 0.07);
+    width: 40%;
+    backdrop-filter: blur(10px);
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("photos/lastpicbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 900;
+}
+label {
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 900;
+}
+div {
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 900;
+}
