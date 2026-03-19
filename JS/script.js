@@ -25,7 +25,7 @@ document.getElementById('form').addEventListener('submit', function (e) {
         errors.push("Address is required.");
     }
  
-    // --- Date: required, must not be in the future ---
+    // --- Date: required ---
     const dateVal = document.querySelector('[name="date"]').value;
     if (!dateVal) {
         errors.push("Date is required.");
@@ -33,9 +33,10 @@ document.getElementById('form').addEventListener('submit', function (e) {
         const inputDate = new Date(dateVal);
         const today = new Date();
         today.setHours(0, 0, 0, 0);
-        if (inputDate > today) {
-            errors.push("Date must not be in the future.");
+        if (inputDate > today || inputDate < today) {
+            errors.push("Date must be todays");
         }
+
     }
  
     // --- Service Rows: all 3 required ---
