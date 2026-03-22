@@ -48,7 +48,7 @@
         $errors[] = "Address is required.";
     }
  
-    // Date: required, valid calendar date, must not be in the future
+    /* Date: required, valid calendar date, must not be in the future
     if ($date === '') {
         $errors[] = "Date of Request is required.";
     } else {
@@ -60,6 +60,7 @@
             $errors[] = "Date of Request must not be in the future.";
         }
     }
+        */
  
     // Service rows: all 3 required
     for ($i = 0; $i < 3; $i++) {

@@ -25,18 +25,19 @@ document.getElementById('form').addEventListener('submit', function (e) {
         errors.push("Address is required.");
     }
  
-    // --- Date: required ---
+    // --- Date: required and must be today ---
     const dateVal = document.querySelector('[name="date"]').value;
     if (!dateVal) {
         errors.push("Date is required.");
     } else {
-        const inputDate = new Date(dateVal);
+        const [year, month, day] = dateVal.split('-').map(Number);
+        const inputDate = new Date(year, month - 1, day); // local time, no timezone shift
         const today = new Date();
         today.setHours(0, 0, 0, 0);
-        if (inputDate > today || inputDate < today) {
-            errors.push("Date must be todays");
-        }
 
+        if (inputDate.getTime() !== today.getTime()) {
+            errors.push("Date must be today's date.");
+        }
     }
  
     // --- Service Rows: all 3 required ---
@@ -64,14 +65,14 @@ document.getElementById('form').addEventListener('submit', function (e) {
     });
  
     // --- Show or clear toast ---
-    showToast(errors);
+    Toas(errors);
  
     if (errors.length === 0) {
         this.submit();
     }
 });
  
-function showToast(errors) {
+function Toas(errors) {
     // Remove existing toast if any
     const existing = document.getElementById('validation-toast');
     if (existing) existing.remove();
