@@ -1,3 +1,4 @@
+//file name: script.js
 document.getElementById('form').addEventListener('submit', function (e) {
     e.preventDefault();
  

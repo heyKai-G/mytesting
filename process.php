@@ -1,4 +1,7 @@
 <?php
+
+//file name: process.php
+
     $full_name    = trim($_POST['fullName']    ?? '');
     $age          = trim($_POST['age']         ?? '');
     $address      = trim($_POST['address']     ?? '');
